@@ -1,635 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Rines — Developer Portfolio</title>
-    <meta
-      name="description"
-      content="Grading, attendance, shop management and game servers. Software for people I actually know."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <script>
-      document.documentElement.className = "js";
-    </script>
-  </head>
-  <body>
-    <header class="top">
-      <div class="wrap bar">
-        <a href="#home" class="brand">Rines</a>
-        <nav aria-label="Main">
-          <a href="#about">About</a><a href="#projects">Projects</a
-          ><a href="#stack">Stack</a><a href="#contact">Contact</a>
-        </nav>
-        <a
-          class="btn ghost sm"
-          href="https://github.com/rinestech"
-          target="_blank"
-          rel="noopener"
-          ><svg
-            class="ic"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path
-              d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-            /></svg
-          ><span class="gh-t">GitHub</span
-          ><svg
-            class="ic"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M7 17 17 7M8 7h9v9" /></svg
-        ></a>
-      </div>
-    </header>
-    <main>
-      <section id="home" class="wrap hero">
-        <span class="pill mono"><i></i>Developer</span>
-        <h1 class="mono">Rines<span class="caret"></span></h1>
-        <p class="sub mono">Developer</p>
-        <p class="lead">
-          Grading, attendance, shop management and game servers. Software for
-          people I actually know.
-        </p>
-        <p class="mono typed-line dim">
-          Building
-          <span
-            id="typed"
-            data-words='["grading systems", "game servers", "shop systems", "things people use"]'
-            >grading systems</span
-          >
-        </p>
-        <div class="actions">
-          <a class="btn solid" href="#projects"
-            >View Projects
-            <svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M12 5v14m-6-6 6 6 6-6" /></svg
-          ></a>
-          <a
-            class="btn ghost"
-            href="https://github.com/rinestech"
-            target="_blank"
-            rel="noopener"
-            ><svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path
-                d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-              />
-            </svg>
-            GitHub</a
-          >
-        </div>
-        <ul class="stats mono">
-          <li><b data-count="7">0</b>projects</li>
-          <li><b data-count="4">0</b>years on SA-MP</li>
-        </ul>
-      </section>
-      <section id="about" class="wrap sec about">
-        <aside>
-          <p class="eyebrow mono">About</p>
-          <h2>Background &amp; Intent</h2>
-          <dl class="meta mono">
-            <div>
-              <dt>Identity:</dt>
-              <dd>Rines</dd>
-            </div>
-            <div>
-              <dt>Core Focus:</dt>
-              <dd>Web systems &amp; game servers</dd>
-            </div>
-            <div>
-              <dt>Specialization:</dt>
-              <dd>PHP / SQL / Pawn (SA-MP)</dd>
-            </div>
-          </dl>
-        </aside>
-        <div class="prose reveal">
-          <p>
-            I&#x27;m Rines, a developer who builds grading, attendance, and shop
-            management systems, plus game servers.
-          </p>
-          <p>
-            I like software for people I actually know: my mom&#x27;s store, a
-            computer shop in our barangay, my school. When real people use it,
-            bugs get reported fast and the work stays honest.
-          </p>
-          <p>
-            I&#x27;ve also scripted SA-MP servers in Pawn from 2021 to 2025, and
-            I&#x27;m building a Tekken-style fighting game.
-          </p>
-          <p>
-            I&#x27;d rather build something useful, maintainable, and finished
-            than make it complicated.
-          </p>
-        </div>
-      </section>
-      <section id="projects" class="wrap sec">
-        <p class="eyebrow mono">Projects</p>
-        <h2>Things I've built</h2>
-        <div class="filters mono" role="group" aria-label="Filter projects">
-          <button class="filter on" data-cat="all">All</button
-          ><button class="filter" data-cat="Thesis">Thesis</button
-          ><button class="filter" data-cat="Real users">Real users</button
-          ><button class="filter" data-cat="Games">Games</button>
-        </div>
-        <div class="grid">
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Thesis"
-            data-title="Tabulation System"
-            data-note="Thesis project. Scores entries and tabulates the results."
-            data-stack=""
-            data-img="assets/img/tabulation.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/tabulation.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'T',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Thesis</span
-            ><strong>Tabulation System</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Thesis"
-            data-title="School Grading System"
-            data-note="Thesis project. Records grades and computes them for the school."
-            data-stack=""
-            data-img="assets/img/grading.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/grading.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'S',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Thesis</span
-            ><strong>School Grading System</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Real users"
-            data-title="Store Management"
-            data-note="Inventory and sales for my mom&#x27;s shop."
-            data-stack=""
-            data-img="assets/img/store.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/store.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'S',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Real users</span
-            ><strong>Store Management</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Real users"
-            data-title="Comshop Management"
-            data-note="Runs a computer shop in our barangay."
-            data-stack=""
-            data-img="assets/img/comshop.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/comshop.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'C',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Real users</span
-            ><strong>Comshop Management</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Real users"
-            data-title="Attendance System"
-            data-note="Attendance tracking for my school."
-            data-stack=""
-            data-img="assets/img/attendance.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/attendance.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'A',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Real users</span
-            ><strong>Attendance System</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Games"
-            data-title="SA-MP Development"
-            data-note="Scripted and developed for SA-MP servers, 2021 to 2025."
-            data-stack="Pawn"
-            data-img="assets/img/samp.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/samp.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'S',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Games</span
-            ><strong>SA-MP Development</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-          <button
-            class="card reveal"
-            type="button"
-            data-cat="Games"
-            data-title="Tekken-style Game"
-            data-note="A fighting game inspired by Tekken."
-            data-stack=""
-            data-img="assets/img/fighter.jpg"
-            data-link=""
-            data-repo=""
-          >
-            <span class="thumb"
-              ><img
-                src="assets/img/fighter.jpg"
-                alt=""
-                loading="lazy"
-                onerror="
-                  this.replaceWith(
-                    Object.assign(document.createElement('span'), {
-                      textContent: 'T',
-                    }),
-                  )
-                "
-            /></span>
-            <span class="mono dim tag">Games</span
-            ><strong>Tekken-style Game</strong>
-            <span class="mono view"
-              >View details
-              <svg
-                class="ic"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M8 7h9v9" /></svg
-            ></span>
-          </button>
-        </div>
-      </section>
-      <dialog id="modal" aria-labelledby="m-title">
-        <button class="x" type="button" aria-label="Close">&times;</button>
-        <div class="thumb big" id="m-img"></div>
-        <p class="mono dim tag" id="m-cat"></p>
-        <h3 id="m-title"></h3>
-        <p id="m-note" class="muted"></p>
-        <div id="m-stack" class="chips mono"></div>
-        <div id="m-links" class="actions"></div>
-      </dialog>
-      <section id="stack" class="wrap sec">
-        <p class="eyebrow mono">Stack</p>
-        <h2>Tools &amp; technologies</h2>
-        <h3 class="grp mono">Languages</h3>
-        <div class="tiles">
-          <div class="tile reveal">
-            <small class="mono dim">Language</small><b class="mono">PHP</b>
-          </div>
-          <div class="tile reveal">
-            <small class="mono dim">Language</small><b class="mono">SQL</b>
-          </div>
-          <div class="tile reveal">
-            <small class="mono dim">Language</small
-            ><b class="mono">JavaScript</b>
-          </div>
-          <div class="tile reveal">
-            <small class="mono dim">Language</small><b class="mono">Java</b>
-          </div>
-          <div class="tile reveal">
-            <small class="mono dim">Language</small
-            ><b class="mono">Pawn (SA-MP)</b>
-          </div>
-          <div class="tile reveal">
-            <small class="mono dim">Language</small
-            ><b class="mono">Luau (Roblox)</b>
-          </div>
-        </div>
-        <h3 class="grp mono">Frameworks</h3>
-        <div class="tiles">
-          <div class="tile reveal">
-            <small class="mono dim">Framework</small
-            ><b class="mono">React Native</b>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="wrap sec contact">
-        <p class="eyebrow mono">Contact</p>
-        <h2>Let's build something.</h2>
-        <p class="lead">
-          For projects, collaborations, or development work, reach me by email
-          or GitHub.
-        </p>
-        <div class="actions">
-          <a class="btn solid" href="mailto:princelorenzmdg@gmail.com"
-            ><svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="m3 7 9 6 9-6" />
-            </svg>
-            Email Me</a
-          >
-          <a
-            class="btn ghost"
-            href="https://github.com/rinestech"
-            target="_blank"
-            rel="noopener"
-            ><svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path
-                d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-              />
-            </svg>
-            GitHub
-            <svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M7 17 17 7M8 7h9v9" /></svg
-          ></a>
-        </div>
-        <div class="mailbox mono">
-          <span
-            ><span class="dim">Direct Email:</span>
-            <span id="mail">princelorenzmdg@gmail.com</span></span
-          >
-          <button class="btn ghost sm" type="button" id="copy">
-            <svg
-              class="ic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <rect x="9" y="9" width="11" height="11" rx="2" />
-              <path d="M5 15V6a2 2 0 0 1 2-2h9" />
-            </svg>
-            <span>Copy Address</span>
-          </button>
-        </div>
-        <hr />
-        <p class="eyebrow mono">Or send a message</p>
-        <p class="msg ok" id="ok" role="status" hidden>
-          Message sent. I'll reply by email.
-        </p>
-        <p class="msg bad" id="bad" role="alert" hidden>
-          Could not send. Check every field and try again.
-        </p>
-        <!-- Replace YOUR_FORM_ID with your Formspree form id (formspree.io, free) -->
-        <form
-          class="form"
-          id="contact-form"
-          method="post"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-        >
-          <label>Name<input name="name" required autocomplete="name" /></label>
-          <label
-            >Email<input
-              name="email"
-              type="email"
-              required
-              autocomplete="email"
-          /></label>
-          <label
-            >Message<textarea name="message" rows="5" required></textarea>
-          </label>
-          <input
-            class="hp"
-            name="_gotcha"
-            tabindex="-1"
-            autocomplete="off"
-            aria-hidden="true"
-          />
-          <button class="btn solid" type="submit">Send message</button>
-        </form>
-      </section>
-    </main>
-    <footer class="foot">
-      <div class="wrap foot-in">
-        <div>
-          <b>Rines</b><span class="mono dim">Developer</span
-          ><span class="mono dim">&copy; <span id="yr">2026</span></span>
-        </div>
-        <div class="mono foot-links">
-          <a href="https://github.com/rinestech" target="_blank" rel="noopener"
-            >GitHub</a
-          ><a href="mailto:princelorenzmdg@gmail.com">Email</a>
-        </div>
-      </div>
-    </footer>
-    <script src="assets/main.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rines — Developer Portfolio</title>
+<meta name="description" content="Grading, attendance, shop management and game servers. Software for people I actually know.">
+<meta name="theme-color" content="#080808">
+<meta property="og:title" content="Rines — Developer Portfolio">
+<meta property="og:description" content="Grading, attendance, shop management and game servers. Software for people I actually know.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23080808'/%3E%3Ctext x='50' y='70' font-size='64' text-anchor='middle' fill='white' font-family='monospace' font-weight='700'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.className="js";</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="top"><div class="wrap bar">
+<a href="#home" class="brand">Rines</a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#contact">Contact</a></nav>
+<a class="btn ghost sm" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="gh-t">GitHub</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+</div></header>
+<main>
+<section id="home" class="wrap hero">
+<span class="pill mono"><i></i>Developer</span>
+<h1 class="mono">Rines<span class="caret"></span></h1>
+<p class="sub mono">Developer</p>
+<p class="lead">Grading, attendance, shop management and game servers. Software for people I actually know.</p>
+<p class="mono typed-line dim">Building <span id="typed" data-words='["grading systems", "game servers", "shop systems", "things people use"]'>grading systems</span></p>
+<div class="actions"><a class="btn solid" href="#projects">View Projects <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a>
+<a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub</a></div>
+<ul class="stats mono"><li><b data-count="7">0</b>projects</li><li><b data-count="4">0</b>years on SA-MP</li><li><b data-count="3">0</b>used by real people</li></ul>
+</section>
+
+<section id="about" class="wrap sec about">
+<aside><p class="eyebrow mono">About</p><h2>Background &amp; Intent</h2>
+<dl class="meta mono"><div><dt>Identity:</dt><dd>Rines</dd></div><div><dt>Core Focus:</dt><dd>Web systems &amp; game servers</dd></div><div><dt>Specialization:</dt><dd>PHP / SQL / Pawn (SA-MP)</dd></div></dl></aside>
+<div class="prose reveal">
+<p>I'm Rines, a developer who builds grading, attendance, and shop management systems, plus game servers.</p>
+<p>I like software for people I actually know: my mom's store, a computer shop in our barangay, my school. When real people use it, bugs get reported fast and the work stays honest.</p>
+<p>I've also scripted SA-MP servers in Pawn from 2021 to 2025, and I'm building a Tekken-style fighting game.</p>
+<p>I'd rather build something useful, maintainable, and finished than make it complicated.</p></div>
+</section>
+
+<section id="projects" class="wrap sec">
+<p class="eyebrow mono">Selected Projects</p>
+<h2>Systems &amp; game servers</h2>
+<p class="lead">4 core projects covering school systems, business management and game server development.</p>
+<div class="feat">
+<article class="proj reveal">
+<div class="proj-h"><span class="mono num">01</span><span class="pill mono"><i></i>Thesis</span></div>
+<h3>School Grading System</h3><p class="mono dim kind">Web Application</p><p class="muted">A web-based system for recording student grades and computing them for the school. Built as a thesis project.</p>
+<div class="cols"><div><h4 class="grp mono">Focus Areas</h4><ul class="list sq"><li>Grade recording</li><li>Grade computation</li><li>Student records</li><li>Database design</li><li>Web application</li></ul></div>
+<div><h4 class="grp mono">Key Features</h4><ul class="list dash"><li>Grade entry with automatic computation</li><li>Student and class records kept in a database</li><li>Built and presented as a thesis project</li></ul></div></div>
+<h4 class="grp mono">Technologies</h4><div class="chips mono"><span>PHP</span><span>SQL</span><span>JavaScript</span></div>
+<div class="actions"><a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></article>
+<article class="proj reveal">
+<div class="proj-h"><span class="mono num">02</span><span class="pill mono"><i></i>Thesis</span></div>
+<h3>Tabulation System</h3><p class="mono dim kind">Web Application</p><p class="muted">A system that scores entries and tabulates the results automatically. Built as a thesis project.</p>
+<div class="cols"><div><h4 class="grp mono">Focus Areas</h4><ul class="list sq"><li>Score entry</li><li>Result tabulation</li><li>Ranking</li><li>Database design</li><li>Web application</li></ul></div>
+<div><h4 class="grp mono">Key Features</h4><ul class="list dash"><li>Automatic computation of scores and totals</li><li>Results ready to read without manual counting</li><li>Built and presented as a thesis project</li></ul></div></div>
+<h4 class="grp mono">Technologies</h4><div class="chips mono"><span>PHP</span><span>SQL</span><span>JavaScript</span></div>
+<div class="actions"><a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></article>
+<article class="proj reveal">
+<div class="proj-h"><span class="mono num">03</span><span class="pill mono"><i></i>Real users</span></div>
+<h3>Comshop Management</h3><p class="mono dim kind">Business Management System</p><p class="muted">A management system made for a computer shop in our barangay and used for its day-to-day operations.</p>
+<div class="cols"><div><h4 class="grp mono">Focus Areas</h4><ul class="list sq"><li>Shop operations</li><li>Record keeping</li><li>Reports</li><li>Database design</li><li>Real-world use</li></ul></div>
+<div><h4 class="grp mono">Key Features</h4><ul class="list dash"><li>Replaces manual tracking for the shop</li><li>Built around how the shop owner actually works</li><li>Improved from real feedback</li></ul></div></div>
+<h4 class="grp mono">Technologies</h4><div class="chips mono"><span>PHP</span><span>SQL</span><span>JavaScript</span></div>
+<div class="actions"><a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></article>
+<article class="proj reveal">
+<div class="proj-h"><span class="mono num">04</span><span class="pill mono"><i></i>2021 to 2025</span></div>
+<h3>SA-MP Development</h3><p class="mono dim kind">Game Server Systems</p><p class="muted">Scripted and developed gamemode systems for SA-MP servers in Pawn, from 2021 until 2025.</p>
+<div class="cols"><div><h4 class="grp mono">Focus Areas</h4><ul class="list sq"><li>Pawn scripting</li><li>Gamemode systems</li><li>Multiplayer features</li><li>Server-side gameplay</li><li>SA-MP / open.mp</li></ul></div>
+<div><h4 class="grp mono">Key Features</h4><ul class="list dash"><li>Four years of server-side scripting</li><li>Custom gameplay systems written in Pawn</li><li>Worked with live player communities</li></ul></div></div>
+<h4 class="grp mono">Technologies</h4><div class="chips mono"><span>Pawn</span><span>SA-MP</span><span>open.mp</span></div>
+<div class="actions"><a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></article>
+</div>
+<h3 class="grp mono more-h">More projects</h3>
+<p class="muted">Tap a project to see its details.</p>
+<div class="grid">
+<button class="card reveal" type="button" data-cat="Real users" data-title="Store Management" data-note="Inventory and sales for my mom&#x27;s shop." data-stack="" data-img="assets/img/store.jpg" data-link="" data-repo="">
+<span class="thumb"><img src="assets/img/store.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'S'}))"></span>
+<span class="mono dim tag">Real users</span><strong>Store Management</strong><span class="mono view">View details <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+<button class="card reveal" type="button" data-cat="Real users" data-title="Attendance System" data-note="Attendance tracking for my school." data-stack="" data-img="assets/img/attendance.jpg" data-link="" data-repo="">
+<span class="thumb"><img src="assets/img/attendance.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'A'}))"></span>
+<span class="mono dim tag">Real users</span><strong>Attendance System</strong><span class="mono view">View details <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+<button class="card reveal" type="button" data-cat="Games" data-title="Tekken-style Game" data-note="A fighting game inspired by Tekken." data-stack="" data-img="assets/img/fighter.jpg" data-link="" data-repo="">
+<span class="thumb"><img src="assets/img/fighter.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'T'}))"></span>
+<span class="mono dim tag">Games</span><strong>Tekken-style Game</strong><span class="mono view">View details <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+</div>
+</section>
+
+<dialog id="modal" aria-labelledby="m-title">
+<button class="x" type="button" aria-label="Close">&times;</button>
+<div class="thumb big" id="m-img"></div><p class="mono dim tag" id="m-cat"></p><h3 id="m-title"></h3><p id="m-note" class="muted"></p>
+<div id="m-stack" class="chips mono"></div><div id="m-links" class="actions"></div>
+</dialog>
+
+<section id="capabilities" class="wrap sec"><p class="eyebrow mono">What I build</p><h2>Domains &amp; capabilities</h2><div class="caps"><div class="cap reveal"><h3 class="mono">Management Systems</h3><p>Grading, attendance, tabulation, store and shop systems for schools and local businesses.</p></div><div class="cap reveal"><h3 class="mono">Game Server Systems</h3><p>SA-MP / open.mp scripting in Pawn: gamemodes, multiplayer features and server-side gameplay.</p></div><div class="cap reveal"><h3 class="mono">Game Development</h3><p>A Tekken-style fighting game and Roblox systems in Luau.</p></div><div class="cap reveal"><h3 class="mono">Mobile Apps</h3><p>Apps built with React Native and Java.</p></div></div></section>
+
+<section id="stack" class="wrap sec"><p class="eyebrow mono">Stack</p><h2>Tools &amp; technologies</h2><h3 class="grp mono">Languages</h3><div class="tiles"><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">PHP</b></div><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">SQL</b></div><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">JavaScript</b></div><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">Java</b></div><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">Pawn (SA-MP)</b></div><div class="tile reveal"><small class="mono dim">Language</small><b class="mono">Luau (Roblox)</b></div></div><h3 class="grp mono">Frameworks</h3><div class="tiles"><div class="tile reveal"><small class="mono dim">Framework</small><b class="mono">React Native</b></div></div><h3 class="grp mono">Tools</h3><div class="tiles"><div class="tile reveal"><small class="mono dim">Tool</small><b class="mono">Roblox Studio</b></div></div></section>
+
+<section id="philosophy" class="wrap sec philo"><p class="eyebrow mono">Development philosophy</p>
+<h2 class="mono">Useful. Maintainable. Finished.</h2>
+<p class="lead">I build for the people who will actually use the system. I ship it, listen to what breaks, fix it, and keep it simple enough to maintain.</p></section>
+
+<section id="github" class="wrap sec"><div class="gh-box">
+<div class="gh-top"><div><p class="eyebrow mono">GitHub</p><h2>More of my work</h2><p class="muted">More of my projects and development work are on GitHub.</p></div>
+<a class="btn solid" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> View GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+<div class="repos-wrap" id="repos-wrap" hidden><p class="eyebrow mono">Latest repositories <span class="dim">github.com/rinestech</span></p><div class="repos" id="repos"></div></div>
+</div></section>
+
+<section id="contact" class="wrap sec contact"><p class="eyebrow mono">Contact</p><h2>Let's build something.</h2>
+<p class="lead">For projects, collaborations, or development work, reach me by email or GitHub.</p>
+<div class="actions"><a class="btn solid" href="mailto:princelorenzmdg@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Email Me</a>
+<a class="btn ghost" href="https://github.com/rinestech" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+<div class="mailbox mono"><span><span class="dim">Direct Email:</span> <span id="mail">princelorenzmdg@gmail.com</span></span>
+<button class="btn ghost sm" type="button" id="copy"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copy Address</span></button></div>
+<hr><p class="eyebrow mono">Or send a message</p>
+<p class="msg ok" id="ok" role="status" hidden>Message sent. I'll reply by email.</p>
+<p class="msg bad" id="bad" role="alert" hidden>Could not send. Check every field and try again.</p>
+<!-- Replace YOUR_FORM_ID with your Formspree form id (formspree.io, free) -->
+<form class="form" id="contact-form" method="post" action="https://formspree.io/f/YOUR_FORM_ID">
+<label>Name<input name="name" required autocomplete="name"></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>Message<textarea name="message" rows="5" required></textarea></label>
+<input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn solid" type="submit">Send message</button></form></section>
+</main>
+<footer class="foot"><div class="wrap foot-in"><div><b>Rines</b><span class="mono dim">Developer</span><span class="mono dim">&copy; <span id="yr">2026</span></span></div>
+<div class="mono foot-links"><a href="https://github.com/rinestech" target="_blank" rel="noopener">GitHub</a><a href="mailto:princelorenzmdg@gmail.com">Email</a></div></div></footer>
+<script src="assets/main.js"></script>
+</body>
 </html>
