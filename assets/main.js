@@ -51,6 +51,59 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   $$('main section[id]').forEach(s => spy.observe(s));
 
+  // Preview popup: YouTube, Google Drive video, mp4/webm file, or image (several = gallery)
+  const pv = $('#preview');
+  const stage = $('#pv-stage');
+  const PLAY = '<svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+  const safeUrl = u => /^(https?:\/\/|assets\/|\.\/)/i.test(u);
+  const embed = (src, title) => {
+    const f = document.createElement('iframe');
+    f.src = src; f.title = title; f.allowFullscreen = true;
+    f.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    return f;
+  };
+  const mediaFor = u => {
+    let m;
+    if (!safeUrl(u)) return null;
+    if ((m = u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/)))
+      return embed(`https://www.youtube-nocookie.com/embed/${m[1]}?autoplay=1&rel=0`, 'Video preview');
+    if ((m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/)))
+      return embed(`https://drive.google.com/file/d/${m[1]}/preview`, 'Video preview');
+    if (/\.(mp4|webm|mov|ogg)(\?|#|$)/i.test(u)) {
+      const v = document.createElement('video');
+      v.src = u; v.controls = true; v.autoplay = true; v.playsInline = true;
+      return v;
+    }
+    if (/\.(jpe?g|png|webp|gif|avif|svg)(\?|#|$)/i.test(u)) {
+      const im = new Image(); im.src = u; im.alt = 'Project preview';
+      return im;
+    }
+    const a = document.createElement('a');
+    a.className = 'btn solid'; a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Open preview \u2197';
+    return a;
+  };
+  let items = [], idx = 0;
+  const show = () => {
+    stage.replaceChildren();
+    if (!items.length) { const p = document.createElement('p'); p.textContent = 'Preview coming soon.'; stage.append(p); }
+    else stage.append(mediaFor(items[idx]) || document.createTextNode(''));
+    $('#pv-nav').hidden = items.length < 2;
+    $('#pv-count').textContent = (idx + 1) + ' / ' + items.length;
+  };
+  const openPreview = (title, list) => {
+    items = (list || '').split(/\s+/).filter(Boolean); idx = 0;
+    $('#pv-title').textContent = title + ' preview';
+    show(); pv.showModal();
+  };
+  if (pv) {
+    $$('.pv').forEach(b => b.onclick = () => openPreview(b.dataset.title, b.dataset.preview));
+    $('#pv-prev').onclick = () => { idx = (idx - 1 + items.length) % items.length; show(); };
+    $('#pv-next').onclick = () => { idx = (idx + 1) % items.length; show(); };
+    $('.x', pv).onclick = () => pv.close();
+    pv.addEventListener('click', e => { if (e.target === pv) pv.close(); });
+    pv.addEventListener('close', () => stage.replaceChildren());   // stops any playing video
+  }
+
   // Project details modal (tap a project card)
   const m = $('#modal');
   const arrow = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>';
@@ -75,6 +128,10 @@
         $('#m-img').append(im);
       } else { const s = document.createElement('span'); s.textContent = d.title[0]; $('#m-img').append(s); }
       $('#m-links').innerHTML = link(d.link, 'Live demo') + link(d.repo, 'Source code');
+      const pb = document.createElement('button');
+      pb.type = 'button'; pb.className = 'btn solid'; pb.innerHTML = PLAY + ' Preview';
+      pb.onclick = () => { m.close(); openPreview(d.title, d.preview); };
+      $('#m-links').prepend(pb);
       m.showModal();
     });
     $('.x', m).onclick = () => m.close();

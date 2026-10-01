@@ -62,6 +62,7 @@ h3{margin:0 0 .5rem}
 .feat{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2rem;align-items:stretch}
 .proj{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;transition:border-color .2s}
 .proj:hover{border-color:#333}
+.proj .thumb{aspect-ratio:16/9;margin-bottom:1.25rem}
 .proj-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
 .num{font-size:.75rem;color:var(--dim);background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:.1rem .55rem}
 .proj h3{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;margin:0}
@@ -168,3 +169,15 @@ input:focus,textarea:focus{border-color:#666;outline:0}
   .js .reveal{opacity:1;transform:none;transition:none}
   .caret{animation:none}.card{transition:none}
 }
+
+/* preview popup */
+.proj-f-r{display:flex;align-items:center;gap:.5rem}
+#preview{position:fixed;background:var(--panel);color:var(--text);border:1px solid #333;border-radius:10px;padding:1.25rem;width:min(52rem,94vw)}
+#preview::backdrop{background:rgba(0,0,0,.85)}
+#preview h3{font-size:1rem;margin:0 2.5rem .9rem 0}
+.stage{aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden;display:grid;place-items:center}
+.stage iframe,.stage video{width:100%;height:100%;border:0}
+.stage img{width:100%;height:100%;object-fit:contain}
+.stage p{color:var(--muted);margin:0;padding:1rem;text-align:center}
+.pv-nav{display:flex;justify-content:space-between;align-items:center;margin-top:.9rem;font-size:.8rem;color:var(--dim)}
+.pv-nav[hidden]{display:none}
