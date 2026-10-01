@@ -181,3 +181,9 @@ input:focus,textarea:focus{border-color:#666;outline:0}
 .stage p{color:var(--muted);margin:0;padding:1rem;text-align:center}
 .pv-nav{display:flex;justify-content:space-between;align-items:center;margin-top:.9rem;font-size:.8rem;color:var(--dim)}
 .pv-nav[hidden]{display:none}
+
+/* tappable tool tiles */
+button.tile{font:inherit;color:inherit;text-align:left;cursor:pointer;transition:border-color .15s,transform .15s}
+button.tile:hover{border-color:#555;transform:translateY(-2px)}
+.tile-pv{display:flex;align-items:center;gap:.35rem;font-size:.7rem;color:var(--muted);margin-top:.2rem}
+@media (prefers-reduced-motion:reduce){button.tile{transition:none}}
