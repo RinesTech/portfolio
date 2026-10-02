@@ -51,7 +51,7 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   $$('main section[id]').forEach(s => spy.observe(s));
 
-  // Preview popup: YouTube, Google Drive video, mp4/webm file, or image (several = gallery)
+  // Preview popup: YouTube, Google Drive video, mp4/webm file, image, or a whole folder of designs
   const pv = $('#preview');
   const stage = $('#pv-stage');
   const PLAY = '<svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
@@ -82,23 +82,75 @@
     a.className = 'btn solid'; a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Open preview \u2197';
     return a;
   };
-  let items = [], idx = 0;
+
+  // Finds folder/1.jpg, folder/2.jpg, ... (also .jpeg .png .webp) and stops at the first missing number
+  const EXTS = ['jpg', 'jpeg', 'png', 'webp'];
+  const exists = async u => {
+    try {
+      const r = await fetch(u, { method: 'HEAD' });
+      return r.ok && (r.headers.get('content-type') || '').startsWith('image/');
+    } catch { return false; }
+  };
+  const discover = async (folder, max = 100) => {
+    const found = [];
+    for (let start = 1; start <= max; start += 8) {
+      const batch = await Promise.all(Array.from({ length: 8 }, async (_, k) => {
+        const urls = EXTS.map(x => `${folder}/${start + k}.${x}`);
+        const ok = await Promise.all(urls.map(exists));
+        const i = ok.indexOf(true);
+        return i < 0 ? null : urls[i];
+      }));
+      const gap = batch.indexOf(null);
+      found.push(...(gap < 0 ? batch : batch.slice(0, gap)));
+      if (gap >= 0) break;
+    }
+    return found;
+  };
+  const folderCache = {};
+
+  let items = [], idx = 0, gallery = false, inFolder = false, token = 0;
   const show = () => {
     stage.replaceChildren();
-    if (!items.length) { const p = document.createElement('p'); p.textContent = 'Preview coming soon.'; stage.append(p); }
-    else stage.append(mediaFor(items[idx]) || document.createTextNode(''));
-    $('#pv-nav').hidden = items.length < 2;
+    stage.classList.toggle('gallery', gallery);
+    stage.classList.toggle('tall', inFolder && !gallery);
+    $('#pv-back').hidden = !(inFolder && !gallery && items.length > 1);
+    $('#pv-nav').hidden = gallery || items.length < 2;
     $('#pv-count').textContent = (idx + 1) + ' / ' + items.length;
+    if (!items.length) {
+      const p = document.createElement('p');
+      p.textContent = inFolder ? 'Designs coming soon.' : 'Preview coming soon.';
+      stage.append(p);
+    } else if (gallery) {
+      items.forEach((u, i) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'gthumb'; b.setAttribute('aria-label', 'Open design ' + (i + 1));
+        const im = new Image(); im.src = u; im.alt = 'Design ' + (i + 1); im.loading = 'lazy';
+        b.append(im);
+        b.onclick = () => { idx = i; gallery = false; show(); };
+        stage.append(b);
+      });
+    } else stage.append(mediaFor(items[idx]) || document.createTextNode(''));
   };
-  const openPreview = (title, list) => {
-    items = (list || '').split(/\s+/).filter(Boolean); idx = 0;
+  const openPreview = async (title, list, folder) => {
+    const mine = ++token;
+    items = (list || '').split(/\s+/).filter(Boolean); idx = 0; gallery = false; inFolder = false;
     $('#pv-title').textContent = title + ' preview';
-    show(); pv.showModal();
+    if (!folder) { show(); pv.showModal(); return; }
+    inFolder = true; items = [];
+    stage.replaceChildren(); stage.classList.remove('gallery', 'tall');
+    const p = document.createElement('p'); p.textContent = 'Loading designs...'; stage.append(p);
+    $('#pv-nav').hidden = true; $('#pv-back').hidden = true;
+    pv.showModal();
+    if (!folderCache[folder]) folderCache[folder] = await discover(folder);
+    if (mine !== token || !pv.open) return;   // closed or replaced while loading
+    items = folderCache[folder]; gallery = items.length > 1;
+    show();
   };
   if (pv) {
-    $$('.pv').forEach(b => b.onclick = () => openPreview(b.dataset.title, b.dataset.preview));
+    $$('.pv').forEach(b => b.onclick = () => openPreview(b.dataset.title, b.dataset.preview, b.dataset.folder));
     $('#pv-prev').onclick = () => { idx = (idx - 1 + items.length) % items.length; show(); };
     $('#pv-next').onclick = () => { idx = (idx + 1) % items.length; show(); };
+    $('#pv-back').onclick = () => { gallery = true; show(); };
     $('.x', pv).onclick = () => pv.close();
     pv.addEventListener('click', e => { if (e.target === pv) pv.close(); });
     pv.addEventListener('close', () => stage.replaceChildren());   // stops any playing video
