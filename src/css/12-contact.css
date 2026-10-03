@@ -1,0 +1,11 @@
+.mailbox{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1rem;margin-top:2rem;font-size:.85rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1.5rem}
+.form{display:grid;gap:1rem;max-width:34rem}
+label{display:grid;gap:.35rem;color:var(--muted);font-size:.9rem}
+input,textarea{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:.7rem;border-radius:6px;font:inherit}
+input:focus,textarea:focus{border-color:#666;outline:0}
+.hp{position:absolute;left:-9999px}
+.form .btn{justify-self:start}
+.msg{padding:.7rem 1rem;border-radius:6px;max-width:34rem}
+.ok{background:#12291d}.bad{background:#361a1f}
+

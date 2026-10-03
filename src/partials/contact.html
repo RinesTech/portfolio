@@ -1,0 +1,15 @@
+<section id="contact" class="wrap sec contact"><p class="eyebrow mono">Contact</p><h2>Let's build something.</h2>
+<p class="lead">For projects, collaborations, or development work, reach me by email or GitHub.</p>
+<div class="actions"><a class="btn solid" href="mailto:{{site.email}}">{{@icon.mail}} Email Me</a>
+<a class="btn ghost" href="{{site.github}}" target="_blank" rel="noopener">{{@icon.gh}} GitHub {{@icon.arrow}}</a></div>
+<div class="mailbox mono"><span><span class="dim">Direct Email:</span> <span id="mail">{{site.email}}</span></span>
+<button class="btn ghost sm" type="button" id="copy">{{@icon.copy}}<span>Copy Address</span></button></div>
+<hr><p class="eyebrow mono">Or send a message</p>
+<p class="msg ok" id="ok" role="status" hidden>Message sent. I'll reply by email.</p>
+<p class="msg bad" id="bad" role="alert" hidden>Could not send. Check every field and try again.</p>
+<form class="form" id="contact-form" method="post" action="https://formspree.io/f/{{site.formspreeId}}">
+<label>Name<input name="name" required autocomplete="name"></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>Message<textarea name="message" rows="5" required></textarea></label>
+<input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn solid" type="submit">Send message</button></form></section>

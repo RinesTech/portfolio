@@ -1,0 +1,14 @@
+.hero{padding-top:7rem;padding-bottom:5rem}
+.pill{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--muted);border:1px solid var(--line);background:var(--panel2);border-radius:6px;padding:.25rem .6rem}
+.pill i{width:6px;height:6px;border-radius:50%;background:#8a8a8a}
+h1{font-size:clamp(2.4rem,8vw,4.6rem);line-height:1.1;font-weight:700;margin:1.5rem 0 .5rem;letter-spacing:-.02em}
+.caret{display:inline-block;width:3px;height:.85em;background:#aaa;margin-left:.15em;vertical-align:-.05em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.sub{font-size:1.4rem;color:var(--muted);margin:0 0 1.5rem}
+.lead{color:var(--muted);max-width:38rem;font-size:1.1rem}
+.typed-line{font-size:.85rem;margin:.75rem 0 0}
+.typed-line span{color:var(--text)}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+.stats{list-style:none;display:flex;gap:3rem;padding:0;margin:3.5rem 0 0;color:var(--dim);font-size:.8rem;flex-wrap:wrap}
+.stats b{display:block;font:700 2rem var(--mono);color:var(--text)}
+

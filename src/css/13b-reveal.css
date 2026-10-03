@@ -1,0 +1,3 @@
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
+.js .reveal.in{opacity:1;transform:none}
+

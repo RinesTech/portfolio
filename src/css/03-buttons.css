@@ -1,0 +1,6 @@
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 .95rem Inter,sans-serif;padding:.7rem 1.2rem;border-radius:6px;border:1px solid var(--line);text-decoration:none;cursor:pointer;color:var(--text);background:var(--panel2);transition:background .15s,border-color .15s}
+.btn.solid{background:#fff;color:#080808;border-color:#fff}
+.btn.solid:hover{background:#e4e4e4}
+.btn.ghost:hover{border-color:#444;background:#1a1a1a}
+.btn.sm{padding:.4rem .8rem;font:500 .8rem var(--mono)}
+

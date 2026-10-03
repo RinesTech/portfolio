@@ -1,0 +1,12 @@
+.gh-box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.75rem}
+.gh-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap}
+.gh-top h2{margin-bottom:.5rem}
+.gh-top p.muted{margin:0}
+.repos-wrap{margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin-top:1rem}
+.repo{display:grid;gap:.5rem;align-content:start;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:1rem;text-decoration:none;transition:border-color .15s}
+.repo:hover{border-color:#555}
+.repo b{font-size:.9rem}
+.repo p{margin:0;color:var(--muted);font-size:.85rem;line-height:1.5}
+.repo footer{display:flex;justify-content:space-between;font-size:.72rem;color:var(--dim);padding-top:.7rem;border-top:1px solid var(--line);margin-top:.3rem}
+

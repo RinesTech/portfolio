@@ -1,0 +1,7 @@
+.foot{margin-top:5rem;border-top:1px solid var(--line);padding:2.5rem 0}
+.foot-in{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.foot-in div:first-child{display:grid;font-size:.85rem}
+.foot-links{display:flex;gap:1.5rem;font-size:.8rem}
+.foot-links a{color:var(--dim);text-decoration:none}
+.foot-links a:hover{color:var(--text)}
+

@@ -1,0 +1,10 @@
+.grp{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500;margin:2rem 0 .75rem}
+.tiles{display:flex;flex-wrap:wrap;gap:.75rem}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;min-width:9rem;display:grid;gap:.15rem}
+.tile small{font-size:.7rem}
+
+button.tile{font:inherit;color:inherit;text-align:left;cursor:pointer;transition:border-color .15s,transform .15s}
+button.tile:hover{border-color:#555;transform:translateY(-2px)}
+.tile-pv{display:flex;align-items:center;gap:.35rem;font-size:.7rem;color:var(--muted);margin-top:.2rem}
+@media (prefers-reduced-motion:reduce){button.tile{transition:none}}
+

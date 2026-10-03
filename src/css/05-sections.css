@@ -1,0 +1,5 @@
+.sec{padding-top:5rem;padding-bottom:2rem;border-top:1px solid var(--line)}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 .5rem}
+h2{font-size:clamp(1.7rem,4vw,2.2rem);line-height:1.2;font-weight:800;margin:0 0 1.5rem;letter-spacing:-.02em}
+h3{margin:0 0 .5rem}
+

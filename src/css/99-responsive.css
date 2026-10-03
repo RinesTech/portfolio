@@ -1,0 +1,16 @@
+@media (max-width:760px){
+  .about{grid-template-columns:1fr;gap:2rem}
+  .feat{grid-template-columns:1fr}
+  nav{gap:1rem}
+  .gh-t{display:none}
+  .hero{padding-top:4rem}
+  .proj{padding:1.25rem}
+  .list.two{grid-template-columns:1fr}
+}
+@media (max-width:480px){nav a{font-size:.85rem}.stats{gap:2rem}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .caret{animation:none}.card{transition:none}
+}
+
